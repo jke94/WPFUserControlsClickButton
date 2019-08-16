@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFUserControlsClickButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFUserControlsClickButton"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Button x:Name="btnHome" HorizontalAlignment="Center" Grid.Column="0"  Grid.Row="0"    Content="Home"      Height="20" Width="50"        Click="BtnHome_Click"/>
+        <Button x:Name="btnGames" Grid.Column="0"  Grid.Row="1"    Content="Games"     Height="20" Width="50"       Click="BtnGames_Click"/>
+        <Button x:Name="btnMusic" Grid.Column="0"  Grid.Row="2"    Content="Music"     Height="20" Width="50"       Click="BtnMusic_Click"/>
+        <Button x:Name="btnNews"  Grid.Column="0"  Grid.Row="3"    Content="News"      Height="20" Width="50"       Click="BtnNews_Click"/>
+
+        <Grid Grid.Column="2" Grid.RowSpan="4"  x:Name="gridContainer" >
+            <local:Home  x:Name="home"  Visibility="Collapsed"> </local:Home>
+            <local:Games x:Name="games" Visibility="Collapsed"> </local:Games>
+            <local:Music x:Name="music" Visibility="Collapsed"> </local:Music>
+            <local:News  x:Name="news"  Visibility="Collapsed"> </local:News>
+        </Grid>
+          
+    </Grid>
+</Window>
